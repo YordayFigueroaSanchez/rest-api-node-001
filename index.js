@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 3000
 
 //setting
-app.set("name", "rest-api-node-001")
+app.set("name", "rest-api-node-001");
+app.set("port", process.env.port || 3500);
 
 app.use( express.json());
 
@@ -51,7 +51,7 @@ app.delete("/estudiantes/:id", (req, res) => {
   res.json("id eliminado");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(app.get("port"), () => {
+  console.log(`Example app listening at http://localhost:${app.get("port")}`)
   console.log("Nombre de la applicacion", app.get("name"));
 });
