@@ -12,3 +12,6 @@ npx nodemon archivo.js
 --para probar los POST y GET
 --instalar complemento en visual studio code
 REST Client
+
+--automatizar inicio de nodemon
+npm run dev
