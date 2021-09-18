@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.use( express.json());
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 });
@@ -24,16 +26,16 @@ app.get('/estudiantes', (req, res) => {
       "nombre":"nombre02",
       "apellido":"apellido02"
     },
-]
-res.json(estudiantes);
+  ]
+  res.json(estudiantes);
 });
 
 app.post('/estudiantes', (req, res) => {
-  
-res.json("Datos recibidos");
-
+  const {nombre, correo} = req.body;
+  console.log(nombre);
+  res.json("Datos recibidos");
 });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})
+});
