@@ -24,3 +24,7 @@ agregar "" en la ruta del metodo
 --video 02
     configurar el nombre de la app
     configurar el puerto
+    mejorar estructura de la app
+        nuevo directorio src, nuevo file app.js  y exportar 
+    agregando routes a la app   
+        nuevo directorio src/routes, nuevo file estudiantes.routes.js, agregar la importacion de Router de express 

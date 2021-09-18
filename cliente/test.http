@@ -1,7 +1,7 @@
-GET http://localhost:3500/estudiantes
+GET http://localhost:3500/api/estudiantes
 
 ###
-POST http://localhost:3500/estudiantes
+POST http://localhost:3500/api/estudiantes
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ Content-Type: application/json
 GET http://localhost:3500/
 
 ###
-PUT http://localhost:3500/estudiantes/111
+PUT http://localhost:3500/api/estudiantes/111
 
 ###
-DELETE http://localhost:3500/estudiantes/222
+DELETE http://localhost:3500/api/estudiantes/222
