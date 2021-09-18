@@ -20,3 +20,6 @@ npm run dev
 
 --agregar DELETE
 agregar "" en la ruta del metodo
+
+--video 02
+    configurar el nombre de la app
