@@ -15,3 +15,5 @@ REST Client
 
 --automatizar inicio de nodemon
 npm run dev
+
+--agregar PUT

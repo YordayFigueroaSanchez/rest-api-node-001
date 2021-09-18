@@ -36,6 +36,12 @@ app.post('/estudiantes', (req, res) => {
   res.json("Datos recibidos");
 });
 
+app.put('/estudiantes', (req, res) => {
+  const {nombre, correo} = req.body;
+  console.log(nombre);
+  res.json("Datos actualizados");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });

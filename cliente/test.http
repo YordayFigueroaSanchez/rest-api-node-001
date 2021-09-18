@@ -11,3 +11,12 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/
+
+###
+PUT http://localhost:3000/estudiantes
+Content-Type: application/json
+
+{
+    "nombre":"Nombre 01",
+    "email":"nombre@email.com"
+}
