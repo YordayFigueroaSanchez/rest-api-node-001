@@ -4,11 +4,11 @@ const port = 3000
 
 app.use( express.json());
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send('Hello World!')
 });
 
-app.get('/doble/:num', (req, res) => {
+app.get("/doble/:num", (req, res) => {
     console.log(req.params);
     const doble = {
       "num" : req.params.num,
@@ -17,7 +17,7 @@ app.get('/doble/:num', (req, res) => {
     res.json(doble);
   });
 
-app.get('/estudiantes', (req, res) => {
+app.get("/estudiantes", (req, res) => {
   const estudiantes = [
     {
       "nombre":"nombre01",
@@ -30,16 +30,22 @@ app.get('/estudiantes', (req, res) => {
   res.json(estudiantes);
 });
 
-app.post('/estudiantes', (req, res) => {
+app.post("/estudiantes", (req, res) => {
   const {nombre, correo} = req.body;
   console.log(nombre);
   res.json("Datos recibidos");
 });
 
-app.put('/estudiantes', (req, res) => {
-  const {nombre, correo} = req.body;
-  console.log(nombre);
-  res.json("Datos actualizados");
+app.put("/estudiantes/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  res.json("id actualizado");
+});
+
+app.delete("/estudiantes/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  res.json("id eliminado");
 });
 
 app.listen(port, () => {

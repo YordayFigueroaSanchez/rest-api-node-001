@@ -17,3 +17,6 @@ REST Client
 npm run dev
 
 --agregar PUT
+
+--agregar DELETE
+agregar "" en la ruta del metodo
