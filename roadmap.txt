@@ -1,0 +1,14 @@
+--En la consola de visual studio code
+npm init -y
+
+npm install express
+
+--para instalar y actualice el codigo despues de algun cambio
+npm i nodemon -D 
+--para ejecutar
+npx nodemon archivo.js
+
+
+--para probar los POST y GET
+--instalar complemento en visual studio code
+REST Client
