@@ -33,3 +33,5 @@ agregar "" en la ruta del metodo
     crear archivos estaticos
         nuevo directorio public con index.html y CSS
         Bootswatch Themes free (https://bootswatch.com/)
+    implementar MORGAN
+        npm i morgan
