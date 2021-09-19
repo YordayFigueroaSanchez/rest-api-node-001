@@ -1,7 +1,11 @@
 const express = require("express");
 const morgan = require("morgan");
+const conexionDB = require("./db.conexion");
 const routerEstudiantes = require('./routes/estudiantes.routes');
 const app = express();
+
+//Conexion a la DB
+conexionDB();
 
 //setting
 app.set("name", "rest-api-node-001");

@@ -35,3 +35,8 @@ agregar "" en la ruta del metodo
         Bootswatch Themes free (https://bootswatch.com/)
     implementar MORGAN
         npm i morgan
+--video 03
+    instalar mongoDB
+    instalar mongoosejs (https://mongoosejs.com/)
+    
+
