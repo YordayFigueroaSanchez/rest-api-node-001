@@ -28,3 +28,5 @@ agregar "" en la ruta del metodo
         nuevo directorio src, nuevo file app.js  y exportar 
     agregando routes a la app   
         nuevo directorio src/routes, nuevo file estudiantes.routes.js, agregar la importacion de Router de express 
+    agregando controllers
+        nuevo directorio /src/controllers, nuevo file estudiantes.controller.js
