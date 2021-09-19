@@ -8,10 +8,8 @@ app.set("port", process.env.port || 3500);
 
 app.use( express.json());
 
-app.get("/", (req, res) => {
-    res.send('Hello World!')
-  });
 
+app.use(express.static("public"));  
 app.use("/api/estudiantes", routerEstudiantes);
 
-  module.exports = app;
+module.exports = app;
