@@ -38,5 +38,6 @@ agregar "" en la ruta del metodo
 --video 03
     instalar mongoDB
     instalar mongoosejs (https://mongoosejs.com/)
-    
+    crear esquema
+        estudiante
 

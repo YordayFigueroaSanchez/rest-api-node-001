@@ -5,8 +5,8 @@ POST http://localhost:3500/api/estudiantes
 Content-Type: application/json
 
 {
-    "nombre":"Nombre 01",
-    "email":"nombre@email.com"
+    "nombre":"Nombre 02",
+    "correo":"nombre02@email.com"
 }
 
 ###
