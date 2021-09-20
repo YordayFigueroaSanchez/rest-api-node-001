@@ -1,16 +1,12 @@
 const Estudiante = require("../models/estudiante")
 
- exports.get = (req, res) => {
-    const estudiantes = [
-      {
-        "nombre":"nombre01",
-        "apellido":"apellido01"
-      },{
-        "nombre":"nombre02",
-        "apellido":"apellido02"
-      },
-    ]
-    res.json(estudiantes);
+ exports.get = async (req, res) => {
+   try {
+      const estudiantes = await Estudiante.find()
+      res.json(estudiantes);
+   } catch (error) {
+      res.json(error);
+   }
   }
 
   exports.set = async (req, res) => {
