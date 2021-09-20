@@ -3,9 +3,9 @@ const Estudiante = require("../models/estudiante")
  exports.get = async (req, res) => {
    try {
       const estudiantes = await Estudiante.find()
-      res.json(estudiantes);
+      res.status(200).json(estudiantes);
    } catch (error) {
-      res.json(error);
+      res.status(500).json(error);
    }
   }
 
@@ -17,7 +17,7 @@ const Estudiante = require("../models/estudiante")
         const newEstudiante = new Estudiante({nombre, correo});
         await newEstudiante.save();
         console.log(newEstudiante);
-        res.json({
+        res.status(200).json({
           msg : "elemento insertado",
           id : newEstudiante._id
         });
@@ -27,7 +27,7 @@ const Estudiante = require("../models/estudiante")
       }
   
     } catch (error) {
-      res.json(error);
+      res.status(500).json(error);
     }
   }
 
@@ -37,8 +37,17 @@ const Estudiante = require("../models/estudiante")
     res.json("id actualizado");
   }
 
-  exports.delete = (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    res.json("id eliminado");
+  exports.delete = async (req, res) => {
+    try {
+      const id = req.params.id;
+      const deleteEstudiante = await Estudiante.findByIdAndDelete(id);
+      console.log(id);
+      res.status(200).json({
+        msg : "elemento eliminado satisfactoriamente",
+        isOk : true
+      });
+      
+    } catch (error) {
+      res.status(500).json(error);
+    }
   }
