@@ -5,8 +5,20 @@ POST http://localhost:3500/api/estudiantes
 Content-Type: application/json
 
 {
-    "nombre":"Nombre 03",
-    "correo":"nombre03@email.com"
+    "nombre":"Nombre 04",
+    "correo":"nombre04@email.com",
+    "materias":[
+        {
+            "nombre":"Mat",
+            "nota":88,
+            "comentario":"MB"
+        },
+        {
+            "nombre":"Esp",
+            "nota":98,
+            "comentario":"E"
+        }
+    ]
 }
 
 ###
@@ -22,3 +34,6 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3500/api/estudiantes/6147f542d44df7f7a0bb465a
+
+###
+GET http://localhost:3500/api/materias/614805c838d73e8cf8286edd

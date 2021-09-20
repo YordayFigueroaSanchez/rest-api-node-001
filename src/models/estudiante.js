@@ -12,7 +12,14 @@ const EstudianteSchema = new Schema({
     activo : {
         type : Boolean,
         default : true
-    }
+    },
+    materias : [
+        {
+            nota : Number,
+            nombre : String,
+            comentario : String
+        }
+    ]
 });
 
 module.exports = model ( "Estudiante", EstudianteSchema);

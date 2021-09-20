@@ -11,10 +11,10 @@ const Estudiante = require("../models/estudiante")
 
   exports.set = async (req, res) => {
     try {
-      const {nombre, correo} = req.body;
+      const {nombre, correo, materias} = req.body;
       
       if (nombre && correo) {
-        const newEstudiante = new Estudiante({nombre, correo});
+        const newEstudiante = new Estudiante({nombre, correo, materias});
         await newEstudiante.save();
         console.log(newEstudiante);
         res.status(200).json({

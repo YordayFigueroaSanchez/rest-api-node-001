@@ -40,4 +40,11 @@ agregar "" en la ruta del metodo
     instalar mongoosejs (https://mongoosejs.com/)
     crear esquema
         estudiante
+        GET
+        SET
+        DELETE (ligero)
+        UPDATE
+--video 04
+    agregando materias en el schema estudiante
+
 
