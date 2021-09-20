@@ -8,6 +8,10 @@ const EstudianteSchema = new Schema({
     correo : {
         type : String,
         require : true
+    },
+    activo : {
+        type : Boolean,
+        default : true
     }
 });
 

@@ -5,8 +5,8 @@ POST http://localhost:3500/api/estudiantes
 Content-Type: application/json
 
 {
-    "nombre":"Nombre 02",
-    "correo":"nombre02@email.com"
+    "nombre":"Nombre 03",
+    "correo":"nombre03@email.com"
 }
 
 ###
@@ -16,4 +16,4 @@ GET http://localhost:3500/
 PUT http://localhost:3500/api/estudiantes/111
 
 ###
-DELETE http://localhost:3500/api/estudiantes/6146a13d3ce65ac064e37f23
+DELETE http://localhost:3500/api/estudiantes/6147f542d44df7f7a0bb465a

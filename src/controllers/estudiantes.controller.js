@@ -2,7 +2,7 @@ const Estudiante = require("../models/estudiante")
 
  exports.get = async (req, res) => {
    try {
-      const estudiantes = await Estudiante.find()
+      const estudiantes = await Estudiante.find({activo : true})
       res.status(200).json(estudiantes);
    } catch (error) {
       res.status(500).json(error);
@@ -40,7 +40,7 @@ const Estudiante = require("../models/estudiante")
   exports.delete = async (req, res) => {
     try {
       const id = req.params.id;
-      const deleteEstudiante = await Estudiante.findByIdAndDelete(id);
+      const deleteEstudiante = await Estudiante.findByIdAndUpdate(id,{activo : false});
       console.log(id);
       res.status(200).json({
         msg : "elemento eliminado satisfactoriamente",
