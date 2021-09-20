@@ -31,10 +31,26 @@ const Estudiante = require("../models/estudiante")
     }
   }
 
-  exports.update = (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    res.json("id actualizado");
+  exports.update = async (req, res) => {
+    try {
+      const id = req.params.id;
+      const data = req.body;
+
+      if (id && data) {
+
+        await Estudiante.findByIdAndUpdate(id,data);
+        console.log(id);
+        res.status(200).json("Registro actualizado.");
+        
+      } else {
+        res.status(400).json({
+          msg : "Datos insuficientes."
+        });
+      }
+      
+    } catch (error) {
+      res.status(500).json(error);
+    }
   }
 
   exports.delete = async (req, res) => {

@@ -13,7 +13,12 @@ Content-Type: application/json
 GET http://localhost:3500/
 
 ###
-PUT http://localhost:3500/api/estudiantes/111
+PUT http://localhost:3500/api/estudiantes/6147f55dd44df7f7a0bb465e
+Content-Type: application/json
+
+{
+    "nombre":"Nombre 33"
+}
 
 ###
 DELETE http://localhost:3500/api/estudiantes/6147f542d44df7f7a0bb465a
