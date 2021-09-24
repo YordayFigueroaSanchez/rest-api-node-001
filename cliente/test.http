@@ -36,4 +36,17 @@ Content-Type: application/json
 DELETE http://localhost:3500/api/estudiantes/6147f542d44df7f7a0bb465a
 
 ###
-GET http://localhost:3500/api/materias/614805c838d73e8cf8286edd
+GET http://localhost:3500/api/materias/6148004d6060485b9641d43e
+
+###
+POST  http://localhost:3500/api/materias/6148004d6060485b9641d43e
+Content-Type: application/json
+
+{
+    "nombre":"Nombre 44",
+    "nota":44,
+    "comentario":"comentario 44"
+}
+
+###
+DELETE http://localhost:3500/api/materias/6148004d6060485b9641d43e/6148004d6060485b9641d43f
