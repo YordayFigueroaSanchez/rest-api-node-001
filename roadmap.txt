@@ -53,4 +53,9 @@ agregar "" en la ruta del metodo
     agregar profesor controller
     agregar profesor routes
 
+    agregar Json Web Token
+        instalar jwt (https://jwt.io/)
+        https://www.npmjs.com/package/jsonwebtoken
+        
+
 
