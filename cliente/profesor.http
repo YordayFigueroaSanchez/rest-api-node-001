@@ -1,0 +1,7 @@
+POST http://localhost:3500/api/profesores/registrar
+Content-Type: application/json
+
+{
+    "correo":"profesor01@test.com",
+    "clave":"1234"
+}
