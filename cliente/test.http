@@ -50,3 +50,12 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3500/api/materias/6148004d6060485b9641d43e/6148004d6060485b9641d43f
+
+###
+PUT http://localhost:3500/api/materias/6148004d6060485b9641d43e/614bed7ea197fa5e48c36af0
+Content-Type: application/json
+
+{
+    "nota":88,
+    "comentario":"comentario 88"
+}

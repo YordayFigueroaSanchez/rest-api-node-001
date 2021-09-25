@@ -10,5 +10,7 @@ routeMaterias.post("/:idEst", controllerMaterias.set);
 
 routeMaterias.delete("/:idEst/:idMat", controllerMaterias.delete);
 
+routeMaterias.put("/:idEst/:idMat", controllerMaterias.update);
+
 
 module.exports = routeMaterias;

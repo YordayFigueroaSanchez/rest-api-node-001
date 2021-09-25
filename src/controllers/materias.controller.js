@@ -56,3 +56,31 @@ exports.delete = async (req, res) => {
         res.status(500).json(error);
     }
 }
+
+exports.update = async (req, res) => {
+    try {
+        if (req.params.idEst && req.params.idMat && req.body ) {
+            
+            const idEst = req.params.idEst;
+            const idMat = req.params.idMat;
+            const data = req.body;
+            const estudinate = await Estudiante.findById(idEst);
+
+            for (let index = 0; index < estudinate.materias.length; index++) {
+                const element = estudinate.materias[index];
+                if (estudinate.materias[index]._id == idMat) {
+                    
+                    Object.assign(estudinate.materias[index],data);
+                }
+                
+            }
+            await estudinate.save()
+            res.status(200).json({isOK:true});
+
+        } else {
+            res.status(400).json({error:"Debe enviar todos los datos."})
+        }
+    } catch (error) {
+        res.status(500).json({error:error, isOk:false});
+    }
+} 
