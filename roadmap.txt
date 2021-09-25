@@ -47,4 +47,9 @@ agregar "" en la ruta del metodo
 --video 04
     agregando materias en el schema estudiante
 
+--video 05
+    proteccion de rutas mediante tokens
+    agregar profesor schema
+    
+
 
