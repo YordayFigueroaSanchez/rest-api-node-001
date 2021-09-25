@@ -50,6 +50,6 @@ agregar "" en la ruta del metodo
 --video 05
     proteccion de rutas mediante tokens
     agregar profesor schema
+    agregar profesor controller
     
-
 
