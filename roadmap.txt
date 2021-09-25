@@ -51,5 +51,6 @@ agregar "" en la ruta del metodo
     proteccion de rutas mediante tokens
     agregar profesor schema
     agregar profesor controller
-    
+    agregar profesor routes
+
 
