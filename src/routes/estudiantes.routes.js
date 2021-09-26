@@ -1,8 +1,9 @@
 const { Router } = require("express");
 const controllerEstudiante = require('../controllers/estudiantes.controller');
+const autorizarProfesor = require("../auth/profesor.auth");
 const routerEstudiantes = Router();
 
-    routerEstudiantes.get("/", controllerEstudiante.get);
+  routerEstudiantes.get("/", autorizarProfesor, controllerEstudiante.get);
   
   routerEstudiantes.post("/", controllerEstudiante.set);
   

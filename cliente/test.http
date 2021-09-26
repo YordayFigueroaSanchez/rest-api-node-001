@@ -1,4 +1,5 @@
 GET http://localhost:3500/api/estudiantes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRmNjA2YWIyMWY0ODc4OTU4YWNkODEiLCJjb3JyZW8iOiJwcm9mZXNvcjAxQHRlc3QuY29tIiwiaWF0IjoxNjMyNjk2ODUxLCJleHAiOjE2MzI3MDA0NTF9.hUYJEkgVIH4Y2Yo3l8VBYwiGuws7nOFYhJMuEvvlkXA
 
 ###
 POST http://localhost:3500/api/estudiantes
