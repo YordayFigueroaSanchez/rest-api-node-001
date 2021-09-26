@@ -56,6 +56,10 @@ agregar "" en la ruta del metodo
     agregar Json Web Token
         instalar jwt (https://jwt.io/)
         https://www.npmjs.com/package/jsonwebtoken
-        
+
+--video 06
+    enviar archivo al servidor
+        https://www.npmjs.com/package/express-fileupload
+        npm i express-fileupload
 
 
