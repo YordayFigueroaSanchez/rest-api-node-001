@@ -1,4 +1,6 @@
-const Estudiante = require("../models/estudiante")
+const Estudiante = require("../models/estudiante");
+const guardarArchivo = require("../utils/guardar_archivo");
+const agregarArchivo = require("../utils/guardar_archivo")
 
  exports.get = async (req, res) => {
    try {
@@ -10,6 +12,14 @@ const Estudiante = require("../models/estudiante")
   }
 
   exports.set = async (req, res) => {
+    if (req.files) {
+      //ejecuta metodo
+      guardarArchivo(req.files,"expediente","pdf");
+    } else {
+      res.json({
+        error : "agrear info en PDF"
+      });
+    }
     try {
       const {nombre, correo, materias} = req.body;
       

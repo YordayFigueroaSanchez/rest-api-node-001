@@ -4,6 +4,7 @@ const conexionDB = require("./db.conexion");
 const routerEstudiantes = require('./routes/estudiantes.routes');
 const routerMaterias = require('./routes/materias.routes');
 const routerProfesores = require('./routes/profesores.routes');
+const fileupload = require("express-fileupload");
 const app = express();
 
 //Conexion a la DB
@@ -16,6 +17,9 @@ app.set("port", process.env.port || 3500);
 //middleware
 app.use(express.json());
 app.use(morgan("common"));
+app.use(fileupload({
+    createParentPath:true
+}));
 
 
 app.use(express.static("public"));  
