@@ -16,7 +16,28 @@ const agregarArchivo = require("../utils/guardar_archivo")
       //ejecuta metodo
       const resp = await guardarArchivo(req.files,"expediente","application/pdf");
       if (resp.isOk) {
-        res.json({isOK:resp.isOk});
+        //res.json({isOK:resp.isOk});
+        const nombreExpedente = resp.nuevoNombre;
+        try {
+          const {nombre, correo, materias} = req.body;
+          
+          if (nombre && correo) {
+            const newEstudiante = new Estudiante({nombre, correo, materias, nombreExpedente});
+            await newEstudiante.save();
+            console.log(newEstudiante);
+            res.status(200).json({
+              msg : "elemento insertado",
+              id : newEstudiante._id
+            });
+            
+          } else {
+            res.json({isOK:false, msg: "los datos regqeridos"});
+          }
+      
+        } catch (error) {
+          res.status(500).json(error);
+        }
+        
       } else {
         res.json({error:resp.error});
       }
@@ -25,27 +46,6 @@ const agregarArchivo = require("../utils/guardar_archivo")
         error : "agrear info en PDF"
       });
     }
-    /*
-    try {
-      const {nombre, correo, materias} = req.body;
-      
-      if (nombre && correo) {
-        const newEstudiante = new Estudiante({nombre, correo, materias});
-        await newEstudiante.save();
-        console.log(newEstudiante);
-        res.status(200).json({
-          msg : "elemento insertado",
-          id : newEstudiante._id
-        });
-        
-      } else {
-        res.json({isOK:false, msg: "los datos regqeridos"});
-      }
-  
-    } catch (error) {
-      res.status(500).json(error);
-    }
-    */
   }
 
   exports.update = async (req, res) => {

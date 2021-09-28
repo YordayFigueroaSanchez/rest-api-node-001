@@ -13,6 +13,10 @@ const EstudianteSchema = new Schema({
         type : Boolean,
         default : true
     },
+    nombreExpedente : {
+        type : String,
+        require : true
+    },
     materias : [
         {
             nota : Number,
