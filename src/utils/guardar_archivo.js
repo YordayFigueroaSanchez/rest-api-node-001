@@ -6,8 +6,19 @@ const guardarArchivo = async (files, nombreArchivo, tipoArchivo) => {
 
     if (archivo.mimetype == tipoArchivo) {
         
-        resp.isOk = true;
-        return resp;
+        const ahora = Date.parse(Date());
+        console.log(ahora);
+        resp.nuevoNombre = ahora + ".pdf";
+
+        resp.error = await archivo.mv("./expedientes/" + resp.nuevoNombre);
+
+        if (resp.error) {
+            return resp;
+        } else {
+            resp.isOk = true;
+            return resp;
+        }
+
     } else {
         
         resp.error = "formato del archivo incorrecto";
