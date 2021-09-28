@@ -14,12 +14,18 @@ const agregarArchivo = require("../utils/guardar_archivo")
   exports.set = async (req, res) => {
     if (req.files) {
       //ejecuta metodo
-      guardarArchivo(req.files,"expediente","pdf");
+      const resp = await guardarArchivo(req.files,"expediente","application/pdf");
+      if (resp.isOk) {
+        res.json({isOK:resp.isOk});
+      } else {
+        res.json({error:resp.error});
+      }
     } else {
       res.json({
         error : "agrear info en PDF"
       });
     }
+    /*
     try {
       const {nombre, correo, materias} = req.body;
       
@@ -39,6 +45,7 @@ const agregarArchivo = require("../utils/guardar_archivo")
     } catch (error) {
       res.status(500).json(error);
     }
+    */
   }
 
   exports.update = async (req, res) => {
