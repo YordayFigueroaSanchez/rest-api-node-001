@@ -61,5 +61,6 @@ agregar "" en la ruta del metodo
     enviar archivo al servidor
         https://www.npmjs.com/package/express-fileupload
         npm i express-fileupload
+        prueba por medio de Postman agregando tres parametros {nombre, correo y expediente-del tipo file y se selecciona un pdf}
 
 
